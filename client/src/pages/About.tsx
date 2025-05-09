@@ -7,7 +7,7 @@ const About = () => {
         <title>About | KingsBridge</title>
         <meta name="description" content="Welcome to KingsBridge Real Estate" />
       </Helmet>
-      <h1 className="text-3xl font-bold">About Page</h1>
+      <h1 className="text-3xl font-bold">This is the About Page</h1>
     </>
   );
 };
