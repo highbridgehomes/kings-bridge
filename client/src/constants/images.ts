@@ -3,7 +3,9 @@ import KingsBridgeLogo2 from "../assets/images/kingsbridge-logo2.png";
 import ArchiDesign from "../assets/images/archi-design.jpg";
 import EstateConsultancy from "../assets/images/estate-consultancy.jpeg";
 import Person from "../assets/images/person.jpg";
-import PropertyManagers from "../assets/images/property-managers.jpg";
+import PropertyManagers from "../assets/images/property-managers.webp";
+import HappyCustomersOne from "../assets/images/happ-customers1.png";
+import HappyCustomersTwo from "../assets/images/happy-customer2.png";
 
 export const IMAGES = {
   kingsBridgeLogo: KingsBridgeLogo,
@@ -12,4 +14,6 @@ export const IMAGES = {
   estateConsultancy: EstateConsultancy,
   person: Person,
   propertyManagers: PropertyManagers,
+  happyCustomersOne: HappyCustomersOne,
+  happyCustomersTwo: HappyCustomersTwo,
 };
