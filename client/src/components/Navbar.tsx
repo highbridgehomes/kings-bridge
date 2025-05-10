@@ -33,7 +33,7 @@ const NavBar = () => {
                     className="text-[#121212] transition hover:text-[#6AB536]"
                     to="about"
                   >
-                    About KCFM
+                    Learn More
                   </Link>
                 </li>
                 <li>
@@ -41,15 +41,7 @@ const NavBar = () => {
                     className="text-[#121212] transition hover:text-[#6AB536]"
                     to="services"
                   >
-                    Services
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    className="text-[#121212] transition hover:text-[#6AB536]"
-                    to="clients"
-                  >
-                    Our Clients
+                    Our Services
                   </Link>
                 </li>
               </ul>

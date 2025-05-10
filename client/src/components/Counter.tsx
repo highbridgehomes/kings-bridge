@@ -25,11 +25,7 @@ const Counter = ({ target }: { target: number }) => {
     return () => clearInterval(interval);
   }, [inView, target]);
 
-  return (
-    <span ref={ref}>
-      {count.toLocaleString()}
-    </span>
-  );
+  return <span ref={ref}>{count.toLocaleString()}</span>;
 };
 
 export default Counter;
