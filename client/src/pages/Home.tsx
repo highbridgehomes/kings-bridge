@@ -19,6 +19,14 @@ const Home = () => {
     { label: "Happy Customers", target: 1000 },
   ];
 
+  const IMAGES_ARRAY = [
+    IMAGES.clientLogo1,
+    IMAGES.clientLogo2,
+    IMAGES.clientLogo3,
+    IMAGES.clientLogo4,
+    IMAGES.clientLogo5,
+  ];
+
   return (
     <>
       <Helmet>
@@ -29,7 +37,7 @@ const Home = () => {
 
       {/* banner */}
       <section className="bg-[#F9FCF7] lg:grid lg:place-content-center">
-        <div className="mx-auto w-full max-w-screen-xl px-4 pb-16 pt-10 sm:px-6  sm:pb-24 sm:pt-12 md:grid md:grid-cols-2 mt-8 md:mt-0 md:items-center md:gap-4 lg:px-8 lg:pb-32 lg:pt-16">
+        <div className="mx-auto w-full max-w-screen-xl px-4 pb-16 pt-10 sm:px-6  sm:pb-24 sm:pt-12 md:grid md:grid-cols-2 md:mt-0 md:items-center md:gap-4 lg:px-8 lg:pb-32 lg:pt-16">
           <div className="max-w-prose md:text-left  text-center">
             <p className="mb-2 text-base text-pretty text-[#6AB536] sm:text-md/relaxed">
               REAL ESTATE
@@ -143,32 +151,21 @@ const Home = () => {
           About Us
         </h2>
 
-        <div className="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:items-center md:gap-8">
             <div>
               <div className="max-w-lg md:max-w-none">
-                <h3 className="text-2xl font-semibold text-gray-900 sm:text-4xl">
+                <h3 className="text-2xl font-semibold text-gray-900 sm:text-4xl sm:text-left text-center">
                   Welcome to Kingsbridge
                 </h3>
 
-                <p className="mt-4 text-gray-700">
+                <p className="mt-4 text-gray-700 sm:text-left text-center">
                   Kingsbridge, a proud subsidiary of Highbridge Group,
                   specializes in delivering top-tier construction and facility
                   management services. Our commitment to excellence and
                   innovation positions us as a leader in the industry.
                 </p>
               </div>
-              {/* read more  */}
-
-              {/* <div className="mt-4 ">
-                <Link
-                  to="readmore"
-                  className="inline-flex items-center justify-center gap-2 rounded-md bg-[#66CC35] px-12 py-3 text-sm font-medium text-white shadow-sm"
-                >
-                  <span>Read More</span>
-                  <ArrowUpRight className="w-4 h-4" />
-                </Link>
-              </div> */}
             </div>
 
             <div className="rounded-2xl overflow-hidden aspect-video">
@@ -319,10 +316,10 @@ const Home = () => {
       </section>
 
       <section className=" bg-[#121212] mx-auto px-4 py-12 sm:px-6 lg:px-16  ">
-        <h2 className="flex items-center mb-8 justify-center text-3xl sm:text-4xl lg:text-5xl font-semibold text-white">
+        <h2 className="flex items-center mb-4 justify-center text-3xl sm:text-4xl lg:text-5xl font-semibold text-white">
           Our Services
         </h2>
-        <p className="mt-4 mb-8 mx-auto text-center max-w-prose text-base text-pretty text-white sm:text-lg/relaxed">
+        <p className=" mb-8 mx-auto text-center max-w-prose text-base text-pretty text-white sm:text-lg/relaxed">
           Discover how our expertise can help you achieve your goals.
         </p>
 
@@ -399,28 +396,40 @@ const Home = () => {
       {/* FEATURED PROJECTS */}
       <FeaturedProjects />
 
+      {/* Notable Clients */}
+      <section className="mt-8 bg-white mx-auto px-4 py-12 sm:px-6 lg:px-16 sm:mt-10 lg:mt-16">
+        <h2 className="flex items-center mb-4 justify-center text-3xl sm:text-4xl lg:text-5xl font-semibold text-gray-900">
+          Notable Clients
+        </h2>
+
+        <p className="mb-12 mx-auto text-center max-w-prose text-base text-gray-700 sm:text-lg">
+          Hear from our satisfied clients about their experiences with
+          Kingsbridge.
+        </p>
+
+        {/* Animate horizontally */}
+        <div className="overflow-hidden relative">
+          <div className="flex animate-scroll-horizontal">
+            {[...IMAGES_ARRAY, ...IMAGES_ARRAY].map((src, idx) => (
+              <div
+                key={idx}
+                className="flex-shrink-0 h-32 w-60 flex items-center justify-center bg-white"
+              >
+                <img
+                  alt={`Client logo ${idx + 1}`}
+                  src={src}
+                  className="h-24 w-auto object-contain"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* TESTIMONIALS */}
 
       <Testimonials />
 
-      {/* Notable Clients */}
-      <section className="mt-8 bg-white mx-auto px-4 py-12 sm:px-6 lg:px-16 sm:mt-10 lg:mt-16">
-        <h2 className="flex items-center mb-8 justify-center text-3xl sm:text-4xl lg:text-5xl font-semibold text-gray-900">
-          Notable Clients
-        </h2>
-
-        <p className="mt-4 mb-12 mx-auto text-center max-w-prose text-base text-gray-700 sm:text-lg">
-          Hear from our satisfied clients about their experiences with
-          Kingsbridge.
-        </p>
-        <div className="grid grid-cols-1 gap-4 lg:grid-cols-5 lg:gap-8">
-          <div className="h-32 rounded bg-gray-300"></div>
-          <div className="h-32 rounded bg-gray-300"></div>
-          <div className="h-32 rounded bg-gray-300"></div>
-          <div className="h-32 rounded bg-gray-300"></div>
-          <div className="h-32 rounded bg-gray-300"></div>
-        </div>
-      </section>
       {/* build together */}
       <section className="bg-[#0A1403] p-4 sm:p-6 lg:py-12 lg:px-16 lg:place-content-center">
         <div className="bg-[#152A06] w-full rounded-2xl px-4 py-16 sm:px-6 sm:py-24 lg:px-16 lg:py-32">

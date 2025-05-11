@@ -1,41 +1,37 @@
 import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
 import { useState } from "react";
+import { IMAGES } from "../constants/images";
 
 const featuredProjects = [
   {
     text: "A premier residential development showcasing modern architecture and sustainable design",
     name: "Highbridge Residences",
     title: "Highbridge Residences",
-    image:
-      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=928&q=80",
+    image: IMAGES.residences,
   },
   {
     text: "A serene estate offering a blend of luxury and affordability",
     name: "Highbridge Gardens Estate",
     title: "Highbridge Gardens Estate",
-    image:
-      "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=928&q=80",
+    image: IMAGES.gardensEstate,
   },
   {
     text: "A contemporary hosuing project emphasizing comfort and community living",
     name: "Highbridge Chestnut Estate",
     title: "Highbridge Chestnut Estate",
-    image:
-      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=928&q=80",
+    image: IMAGES.chestnut,
   },
   {
     text: "An exclusive estate designed for tranquility and elegance",
     name: "Highbridge Haven Estate",
     title: "Highbridge Haven Estate",
-    image:
-      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=928&q=80",
+    image: IMAGES.haven,
   },
   {
     text: "A modern fully serviced recreational facility developed to meet the lifstyle needs of the Awoyaya community",
     name: "Awoyaya Club House",
     title: "Awoyaya Club House",
-    image:
-      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=928&q=80",
+    image: IMAGES.awoyayaClubHouse,
   },
 ];
 
@@ -57,11 +53,11 @@ const FeaturedProjects = () => {
 
   return (
     <section className="mt-8 bg-[#FFFFFF] mx-auto px-4 py-12 sm:px-6 lg:px-16 sm:mt-10 lg:mt-16">
-      <h2 className="flex items-center mb-8 justify-center text-3xl sm:text-4xl lg:text-5xl font-semibold text-gray-900">
+      <h2 className="flex items-center mb-4 justify-center text-3xl sm:text-4xl lg:text-5xl font-semibold text-gray-900">
         Featured Projects
       </h2>
 
-      <p className="mt-4 mb-12 mx-auto text-center max-w-[80ch] text-base text-gray-700 sm:text-lg">
+      <p className="mb-12 mx-auto text-center max-w-[80ch] text-base text-gray-700 sm:text-lg">
         Discover our latest projects, reflecting our commitment to innovative
         solutions and exceptional quality in all aspects of property development
         and management.
@@ -77,11 +73,11 @@ const FeaturedProjects = () => {
               key={idx}
               className="min-w-full lg:min-w-[33.3333%] px-4 box-border"
             >
-              <div className="flex flex-col  gap-6 p-6 shadow border rounded-2xl border-gray-200 h-full bg-white">
+              <div className="flex flex-col gap-6 p-4 shadow border rounded-2xl border-gray-200 h-full bg-white">
                 <img
                   alt={featuredProjects.name}
                   src={featuredProjects.image}
-                  className="w-full h-60 rounded-2xl object-cover"
+                  className="w-full h-60 rounded-2xl object-fit"
                 />
                 <div>
                   <h3 className="font-semibold text-gray-900 text-lg">

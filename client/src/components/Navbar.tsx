@@ -8,7 +8,7 @@ const NavBar = () => {
       <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between">
           <div className="md:flex md:items-center md:gap-12">
-            <a className="block  font-bold text-lg" href="#">
+            <a className="block  font-bold text-lg" href="/">
               <img
                 className="h-16 w-auto object-contain"
                 alt="KingsBridge Logo"
@@ -31,7 +31,7 @@ const NavBar = () => {
                 <li>
                   <Link
                     className="text-[#121212] transition hover:text-[#6AB536]"
-                    to="about"
+                    to="/learn-more"
                   >
                     Learn More
                   </Link>
@@ -39,7 +39,7 @@ const NavBar = () => {
                 <li>
                   <Link
                     className="text-[#121212] transition hover:text-[#6AB536]"
-                    to="services"
+                    to="/our-services"
                   >
                     Our Services
                   </Link>
@@ -48,14 +48,16 @@ const NavBar = () => {
             </nav>
           </div>
           <div className="flex items-center font-inter gap-4">
+            {/* Contact Us button - visible on medium and up */}
             <Link
-              className="flex items-center gap-2 rounded-md bg-[#6AB536] px-5 py-2.5 text-sm font-medium text-white shadow-sm hover:bg-[#5A9C2E]"
-              to="contact"
+              to="/contact"
+              className="hidden md:flex items-center gap-2 rounded-md bg-[#6AB536] px-5 py-2.5 text-sm font-medium text-white shadow-sm hover:bg-[#5A9C2E]"
             >
               <span>Contact Us</span>
               <ArrowUpRight className="w-4 h-4 text-white" />
             </Link>
 
+            {/* Mobile menu button - visible only on small screens */}
             <div className="block md:hidden">
               <button className="rounded-sm p-2 text-gray-600 transition hover:text-gray-800">
                 <svg

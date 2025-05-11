@@ -3,46 +3,54 @@ import { useState } from "react";
 
 const testimonials = [
   {
-    text: "Kingsbridge Construction transformed our factory space in just a few months...",
-    name: "Engr. Musa Abdullahi",
-    title: "MD, Northern Steel Works",
+    text: "Kingsbridge is reliable and affordable. Their service exceeded expectations.",
+    name: "Deprince Electronics",
+    title: "Returning Customer",
     image:
-      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=928&q=80",
+      "https://lh3.googleusercontent.com/a-/ALV-UjVzOS6-UGaE0FsWi6j4uu2ud1_ZGrIM2XwX3gegbXlqncuzwYs=w72-h72-p-rp-mo-br100",
+  },
+
+  {
+    text: "The service quality was excellent. I was very satisfied with the results.",
+    name: "Deprince Electronics",
+    title: "Client Review",
+    image:
+      "https://lh3.googleusercontent.com/a-/ALV-UjWlAORHkKgro5Kvc-Sw3YH8WZ4oyVvD7yzty5OroHDmN617WFY=w72-h72-p-rp-mo-br100",
   },
   {
-    text: "The professionalism shown by the Kingsbridge team was top-notch...",
-    name: "Mrs. Ifeoma Okonkwo",
-    title: "Director, Oak Plaza",
+    text: "Really nice experience overall. They were professional and courteous.",
+    name: "Sammy Uzochukwu",
+    title: "Local Guide",
     image:
-      "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=928&q=80",
+      "https://lh3.googleusercontent.com/a-/ALV-UjUwCzYSHm2lwCfKU8i0eQx7p4bLMwnTNzqh-3yITbrOIuAO-rJZ=w72-h72-p-rp-mo-ba2-br100",
   },
   {
-    text: "From design to completion, they communicated every step of the way...",
-    name: "Mr. Chinedu Nwankwo",
-    title: "CEO, Enugu Green Homes",
+    text: "Kingsbridge handled everything smoothly from start to finish.",
+    name: "Fikemi Shofowora",
+    title: "Local Guide",
     image:
-      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=928&q=80",
+      "https://lh3.googleusercontent.com/a-/ALV-UjXWhmaPeK2-02Zc2nzfo0_iSKydJH41TRAXO3GalEIYfEiSvuU=w72-h72-p-rp-mo-ba3-br100",
   },
+  // {
+  //   text: "I highly recommend their team. Great work and excellent customer service.",
+  //   name: "Bukola Woleola",
+  //   title: "Verified Customer",
+  //   image:
+  //     "https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?auto=format&fit=crop&w=928&q=80",
+  // },
+  // {
+  //   text: "Professional, timely, and trustworthy. A company I can rely on.",
+  //   name: "Oluwadara Aishat",
+  //   title: "Homeowner",
+  //   image:
+  //     "https://images.unsplash.com/photo-1544005313-517d20b4c50d?auto=format&fit=crop&w=928&q=80",
+  // },
   {
-    text: "Our experience was seamless. Kingsbridge delivered a high-quality hotel...",
-    name: "Mrs. Bukola Adeyemi",
-    title: "Manager, Lagos Luxury Suites",
+    text: "Great team and top-quality execution. Would gladly work with them again.",
+    name: "Kennedy Kc",
+    title: "Local Guide",
     image:
-      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=928&q=80",
-  },
-  {
-    text: "They turned our vision into reality. The school campus they built...",
-    name: "Dr. Tunde Akinwale",
-    title: "Principal, Zenith International School",
-    image:
-      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=928&q=80",
-  },
-  {
-    text: "Working with Kingsbridge was one of the best decisions we made...",
-    name: "Mr. Ibrahim Bello",
-    title: "Founder, Arewa Real Estate",
-    image:
-      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=928&q=80",
+      "https://lh3.googleusercontent.com/a-/ALV-UjU9vD_nh4yuuAqZlrcTD2kiy0oE4qUKFcjVvxWEP3HqAMeoHEFk=w72-h72-p-rp-mo-ba2-br100",
   },
 ];
 
@@ -64,11 +72,11 @@ const Testimonials = () => {
 
   return (
     <section className="mt-8 bg-[#F8F9FC] mx-auto px-4 py-12 sm:px-6 lg:px-16 sm:mt-10 lg:mt-16">
-      <h2 className="flex items-center mb-8 justify-center text-3xl sm:text-4xl lg:text-5xl font-semibold text-gray-900">
+      <h2 className="flex items-center mb-4 justify-center text-3xl sm:text-4xl lg:text-5xl font-semibold text-gray-900">
         Client testimonials
       </h2>
 
-      <p className="mt-4 mb-12 mx-auto text-center max-w-prose text-base text-gray-700 sm:text-lg">
+      <p className=" mb-12 mx-auto text-center max-w-prose text-base text-gray-700 sm:text-lg">
         Hear from our satisfied clients about their experiences with
         Kingsbridge.
       </p>

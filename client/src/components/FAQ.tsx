@@ -1,12 +1,12 @@
 const FAQ = () => {
   return (
     <section className="bg-[#FFFFFF] px-4 py-16 sm:px-6 lg:px-16">
-      <h2 className="text-center text-3xl sm:text-4xl lg:text-5xl font-semibold text-gray-900 mb-8">
+      <h2 className="text-center text-3xl sm:text-4xl lg:text-5xl font-semibold text-gray-900 mb-4">
         FAQ
       </h2>
 
       <p className="text-center max-w-screen-md mx-auto text-base sm:text-lg text-gray-700 mb-12">
-        Common questions answered
+        Find answers to common questions about our services and processes
       </p>
       <div className="flow-root   border border-gray-200 rounded-2xl ">
         <div className="flex bg-[#FAFAFA] border-b border-gray-200 rounded-t-2xl py-4 px-6 text-base sm:text-lg text-gray-700 ">
@@ -19,9 +19,8 @@ const FAQ = () => {
           >
             <summary className="flex pt-4 px-6 items-center justify-between gap-1.5 text-gray-900">
               <h2 className="text-lg font-medium">
-                What services does Kingsbridge offer?{" "}
+                What services does Kingsbridge offer?
               </h2>
-
               <svg
                 className="size-5 shrink-0 transition-transform duration-300 group-open:-rotate-180"
                 xmlns="http://www.w3.org/2000/svg"
@@ -37,23 +36,21 @@ const FAQ = () => {
                 />
               </svg>
             </summary>
-
             <p className="px-6 py-4 text-gray-900">
-              Kingsbridge likely offers a range of construction services and
-              comprehensive facility management solutions, potentially including
-              building maintenance, renovation projects, and property
-              management.{" "}
+              Kingsbridge provides a full suite of services including
+              residential and commercial construction, property renovations,
+              facility management, and integrated security system installation.
+              We’re committed to delivering quality craftsmanship and reliable
+              maintenance solutions tailored to our clients’ needs.
             </p>
           </details>
 
           <details className="group py-4 [&_summary::-webkit-details-marker]:hidden">
-            <summary className="flex  px-6 items-center justify-between gap-1.5 text-gray-900">
+            <summary className="flex px-6 items-center justify-between gap-1.5 text-gray-900">
               <h2 className="text-lg font-medium">
                 Do you handle both residential renovations and large-scale
-                commercial construction projects simultaneously, or do you have
-                separate teams for each?{" "}
+                commercial construction projects?
               </h2>
-
               <svg
                 className="size-5 shrink-0 transition-transform duration-300 group-open:-rotate-180"
                 xmlns="http://www.w3.org/2000/svg"
@@ -69,22 +66,20 @@ const FAQ = () => {
                 />
               </svg>
             </summary>
-
             <p className="px-6 py-4 text-gray-900">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab hic
-              veritatis molestias culpa in, recusandae laboriosam neque aliquid
-              libero nesciunt voluptate dicta quo officiis explicabo
-              consequuntur distinctio corporis earum similique!
+              Yes, we specialize in both. Kingsbridge has dedicated teams with
+              experience in residential renovations and large-scale commercial
+              construction. Each team is equipped with the expertise and
+              resources needed to deliver high-quality results regardless of
+              project size.
             </p>
           </details>
 
           <details className="group py-4 [&_summary::-webkit-details-marker]:hidden">
             <summary className="flex pb-4 px-6 items-center justify-between gap-1.5 text-gray-900">
               <h2 className="text-lg font-medium">
-                For your security and safety systems, do you provide 24/7
-                monitoring services or just installation and maintenance?{" "}
+                Do your security systems include 24/7 monitoring services?
               </h2>
-
               <svg
                 className="size-5 shrink-0 transition-transform duration-300 group-open:-rotate-180"
                 xmlns="http://www.w3.org/2000/svg"
@@ -100,12 +95,11 @@ const FAQ = () => {
                 />
               </svg>
             </summary>
-
             <p className="px-6 py-4 text-gray-900">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab hic
-              veritatis molestias culpa in, recusandae laboriosam neque aliquid
-              libero nesciunt voluptate dicta quo officiis explicabo
-              consequuntur distinctio corporis earum similique!
+              We offer both installation and maintenance of advanced security
+              systems. Additionally, we provide optional 24/7 professional
+              monitoring services to ensure your properties remain protected
+              around the clock.
             </p>
           </details>
         </div>
