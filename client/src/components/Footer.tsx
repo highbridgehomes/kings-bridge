@@ -132,9 +132,12 @@ const Footer = () => {
                       />
                     </svg>
 
-                    <span className="flex-1 text-gray-200">
-                      info@kingsbridgeltd.com
-                    </span>
+                    <a
+                      href="mailto:info@kingsbridge.com"
+                      className="flex-1 text-gray-200"
+                    >
+                      info@kingsbridge.com
+                    </a>
                   </a>
                 </li>
 

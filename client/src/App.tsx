@@ -4,11 +4,11 @@ import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import Services from "./pages/Services";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
-import TermsOfService from "./pages/TermsofService";
 import CookiePolicy from "./pages/CookiePolicy";
 import ScrollRestoration from "./components/ScrollRestoration";
 import OurServices from "./pages/OurServices";
 import LearnMore from "./pages/LearnMore";
+import TermsOfService from "./pages/TermsofService";
 
 function App() {
   return (

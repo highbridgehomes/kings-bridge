@@ -80,7 +80,9 @@ const Contact = () => {
               <Mail className="w-4 h-4 text-[#6AB536] mt-1 flex-shrink-0" />
               <div>
                 <h4 className="text-md font-semibold text-gray-800">Email</h4>
-                <p className="text-gray-600">info@kingsbridgeltd.com</p>
+                <a href="mailto:info@kingsbridge.com" className="text-gray-600">
+                  info@kingsbridge.com
+                </a>
               </div>
             </div>
 
@@ -100,7 +102,14 @@ const Contact = () => {
               <Globe className="w-4 h-4 text-[#6AB536] mt-1 flex-shrink-0" />
               <div>
                 <h4 className="text-md font-semibold text-gray-800">Website</h4>
-                <p className="text-gray-600">www.kingsbridgeltd.com</p>
+                <a
+                  href="https://www.highbridgegroup.org"
+                  className="text-gray-600"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  www.highbridgegroup.org
+                </a>
               </div>
             </div>
           </div>
