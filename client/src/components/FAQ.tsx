@@ -1,6 +1,10 @@
 const FAQ = () => {
   return (
-    <section className="bg-[#FFFFFF] px-4 py-16 sm:px-6 lg:px-16">
+    <section
+      data-aos="fade-up"
+      data-aos-duration="1000"
+      className="bg-[#FFFFFF] px-4 py-16 sm:px-6 lg:px-16"
+    >
       <h2 className="text-center text-3xl sm:text-4xl lg:text-5xl font-semibold text-gray-900 mb-4">
         FAQ
       </h2>
@@ -100,6 +104,63 @@ const FAQ = () => {
               systems. Additionally, we provide optional 24/7 professional
               monitoring services to ensure your properties remain protected
               around the clock.
+            </p>
+          </details>
+          <details className="group py-4 [&_summary::-webkit-details-marker]:hidden">
+            <summary className="flex px-6 items-center justify-between gap-1.5 text-gray-900">
+              <h2 className="text-lg font-medium">
+                Can Kingsbridge assist with property acquisition or real estate
+                consultancy?
+              </h2>
+              <svg
+                className="size-5 shrink-0 transition-transform duration-300 group-open:-rotate-180"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </summary>
+            <p className="px-6 py-4 text-gray-900">
+              Absolutely. Kingsbridge offers expert real estate consultancy
+              services to help clients make informed investment decisions,
+              acquire the right properties, and navigate regulatory requirements
+              with ease.
+            </p>
+          </details>
+
+          <details className="group py-4 [&_summary::-webkit-details-marker]:hidden">
+            <summary className="flex pb-4 px-6 items-center justify-between gap-1.5 text-gray-900">
+              <h2 className="text-lg font-medium">
+                How do you ensure quality and compliance on construction
+                projects?
+              </h2>
+              <svg
+                className="size-5 shrink-0 transition-transform duration-300 group-open:-rotate-180"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </summary>
+            <p className="px-6 py-4 text-gray-900">
+              We adhere to strict industry standards and regulatory guidelines.
+              Our team conducts regular inspections, uses premium materials, and
+              works with certified professionals to ensure every project is
+              delivered with exceptional quality and full compliance.
             </p>
           </details>
         </div>

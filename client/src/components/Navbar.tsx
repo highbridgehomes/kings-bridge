@@ -1,8 +1,24 @@
 import { ArrowUpRight } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { IMAGES } from "../constants/images";
 
 const NavBar = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const handleScroll = (id: string) => {
+    if (location.pathname !== "/") {
+      // Navigate to home first, then scroll after route change
+      navigate("/", { state: { scrollTo: id } });
+    } else {
+      // Already on homepage
+      const section = document.getElementById(id);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  };
+
   return (
     <header className="sticky top-0 z-50 bg-white">
       <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
@@ -21,37 +37,37 @@ const NavBar = () => {
             <nav aria-label="Global">
               <ul className="flex items-center gap-6 text-base font-medium leading-6 font-inter">
                 <li>
-                  <Link
+                  <a
+                    href="/"
                     className="text-[#121212] transition hover:text-[#6AB536]"
-                    to="/"
                   >
                     Home
-                  </Link>
+                  </a>
                 </li>
                 <li>
-                  <Link
+                  <button
+                    onClick={() => handleScroll("about-us")}
                     className="text-[#121212] transition hover:text-[#6AB536]"
-                    to="/learn-more"
                   >
-                    Learn More
-                  </Link>
+                    About Us
+                  </button>
                 </li>
                 <li>
-                  <Link
+                  <button
+                    onClick={() => handleScroll("our-services")}
                     className="text-[#121212] transition hover:text-[#6AB536]"
-                    to="/our-services"
                   >
                     Our Services
-                  </Link>
+                  </button>
                 </li>
               </ul>
             </nav>
           </div>
           <div className="flex items-center font-inter gap-4">
-            {/* Contact Us button - visible on medium and up */}
+            {/* CONTACT US  */}
             <Link
               to="/contact"
-              className="hidden md:flex items-center gap-2 rounded-md bg-[#6AB536] px-5 py-2.5 text-sm font-medium text-white shadow-sm hover:bg-[#5A9C2E]"
+              className="hidden md:flex items-center gap-2 rounded-md bg-[#6AB536] px-5 py-2.5 text-sm font-medium text-white shadow-sm hover:bg-[#5A9C2E] transform transition-transform duration-200 hover:scale-105"
             >
               <span>Contact Us</span>
               <ArrowUpRight className="w-4 h-4 text-white" />

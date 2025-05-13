@@ -2,6 +2,7 @@ import KingsBridgeLogo from "../assets/images/kingsbridge-logo.png";
 import KingsBridgeLogo2 from "../assets/images/kingsbridge-logo2.png";
 import ArchiDesign from "../assets/images/archi-design.jpg";
 import EstateConsultancy from "../assets/images/estate-consultancy.jpeg";
+import RealEstate from "../assets/images/real-estate.webp";
 import Person from "../assets/images/person.jpg";
 import PropertyManagers from "../assets/images/property-managers.webp";
 import HappyCustomersOne from "../assets/images/happ-customers1.png";
@@ -45,4 +46,5 @@ export const IMAGES = {
   blogPost1: BlogPost1,
   blogPost2: BlogPost2,
   blogPost3: BlogPost3,
+  realEstate: RealEstate,
 };

@@ -55,21 +55,24 @@ const Contact = () => {
 
             <button
               type="submit"
-              className="w-full py-3 bg-[#6AB536] hover:bg-[#5A9C2E] text-white rounded-md  transition"
+              className="transform transition-transform duration-200 hover:scale-101 w-full py-3 bg-[#6AB536] hover:bg-[#5A9C2E] text-white rounded-md"
             >
               Send Message
             </button>
           </form>
 
           {/* Contact Info */}
-          <div className=" space-y-8 flex flex-col justify-between h-full sm:p-6 p-4 border border-gray-200 shadow-md rounded-2xl">
+          <div
+            data-aos="fade-left"
+            className=" space-y-8 flex flex-col justify-between h-full sm:p-6 p-4 border border-gray-200 shadow-md rounded-2xl"
+          >
             {/* Address */}
             <div className="flex items-start gap-4">
               <MapPin className="w-4 h-4 text-[#6AB536] mt-1 flex-shrink-0" />
               <div>
                 <h4 className="text-md font-semibold text-gray-800">Address</h4>
                 <p className="text-gray-600">
-                  KM 34 A&M PLAZA, Beside Mobil Filling Station, Lekki-Epe
+                  KM 34 A&M COMPLEX, Beside Mobil Filling Station, Lekki-Epe
                   Expressway, Oribanwa, Lagos.
                 </p>
               </div>
@@ -80,8 +83,11 @@ const Contact = () => {
               <Mail className="w-4 h-4 text-[#6AB536] mt-1 flex-shrink-0" />
               <div>
                 <h4 className="text-md font-semibold text-gray-800">Email</h4>
-                <a href="mailto:info@kingsbridge.com" className="text-gray-600">
-                  info@kingsbridge.com
+                <a
+                  href="mailto:info@kingsbridgeltd.com"
+                  className="text-gray-600"
+                >
+                  info@kingsbridgeltd.com
                 </a>
               </div>
             </div>
@@ -91,9 +97,9 @@ const Contact = () => {
               <Phone className="w-4 h-4 text-[#6AB536] mt-1 flex-shrink-0" />
               <div>
                 <h4 className="text-md font-semibold text-gray-800">Phone</h4>
-                <p className="text-gray-600">
-                  (+234) 8152886217 (+234) 8152886218 (+234) 8152886219
-                </p>
+                <a href="tel:+2349114017478" className="text-gray-600">
+                  (+234) 911 401 7478
+                </a>
               </div>
             </div>
 
@@ -103,12 +109,12 @@ const Contact = () => {
               <div>
                 <h4 className="text-md font-semibold text-gray-800">Website</h4>
                 <a
-                  href="https://www.highbridgegroup.org"
+                  href="https://kingsbridgeltd.com/"
                   className="text-gray-600"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  www.highbridgegroup.org
+                  www.kingsbridgeltd.com
                 </a>
               </div>
             </div>
