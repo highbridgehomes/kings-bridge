@@ -1,27 +1,16 @@
+import { useState } from "react";
 import { ArrowUpRight, Menu, X } from "lucide-react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { IMAGES } from "../constants/images";
-import { useEffect, useState } from "react";
 
 const NavBar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
 
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth >= 768) {
-        setIsSidebarOpen(false);
-      }
-    };
-
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
   const handleScroll = (id: string) => {
+    setIsSidebarOpen(false);
     if (location.pathname !== "/") {
-      // Navigate to home first, then scroll after route change
       navigate("/", { state: { scrollTo: id } });
     } else {
       const section = document.getElementById(id);
@@ -37,7 +26,7 @@ const NavBar = () => {
         <div className="flex h-20 items-center justify-between">
           {/* Logo */}
           <div className="md:flex md:items-center md:gap-12">
-            <a className="block  font-bold text-lg" href="/">
+            <a className="block font-bold text-lg" href="/">
               <img
                 className="h-16 w-auto object-contain"
                 alt="KingsBridge Logo"
@@ -80,7 +69,7 @@ const NavBar = () => {
 
           {/* Right Side */}
           <div className="flex items-center font-inter gap-4">
-            {/* CONTACT Button  */}
+            {/* Contact Button */}
             <Link
               to="/contact"
               className="hidden md:flex items-center gap-2 rounded-md bg-[#6AB536] px-5 py-2.5 text-sm font-medium text-white shadow-sm hover:bg-[#5A9C2E] transform transition-transform duration-200 hover:scale-105"
@@ -89,7 +78,7 @@ const NavBar = () => {
               <ArrowUpRight className="w-4 h-4 text-white" />
             </Link>
 
-            {/* Mobile menu button - visible only on small screens */}
+            {/* Mobile Menu Button */}
             <div className="block md:hidden">
               <button
                 onClick={() => setIsSidebarOpen(true)}
@@ -104,56 +93,44 @@ const NavBar = () => {
 
       {/* Mobile Sidebar Overlay */}
       {isSidebarOpen && (
-        <div className="fixed inset-0 z-50 bg-gray-400 bg-opacity-60">
-          <div
-            className={`fixed top-0 right-0 h-full w-full bg-white p-6 flex flex-col transform transition-transform duration-300 ease-in-out ${
-              isSidebarOpen ? "translate-x-0" : "translate-x-full"
-            }`}
-          >
-            {/* Top Bar with Close Button */}
-            <div className="flex justify-between items-center mb-6 border-b pb-3 border-b-gray-200 p">
-              <img
-                alt="Kingsbridge Logo"
-                className="object-cover w-20 h-10"
-                src={IMAGES.kingsBridgeLogo}
-              />
+        <div className="fixed inset-0 z-50 bg-black bg-opacity-50">
+          <div className="fixed top-0 right-0 h-full w-3/4 max-w-xs bg-white shadow-lg p-6 flex flex-col transition-transform duration-300">
+            {/* Close Button */}
+            <div className="flex justify-between items-center mb-6">
+              <span className="text-lg font-semibold">Menu</span>
               <button onClick={() => setIsSidebarOpen(false)}>
                 <X className="w-6 h-6 text-gray-600 hover:text-[#6AB536]" />
               </button>
             </div>
 
             {/* Menu Items */}
-            <div className="flex flex-col flex-grow">
-              <nav className="flex flex-col gap-4 text-base font-medium">
-                {[
-                  { label: "Home", id: "home" },
-                  { label: "About Us", id: "about-us" },
-                  { label: "Our Services", id: "our-services" },
-                ].map((item) => (
-                  <button
-                    key={item.id}
-                    onClick={() => {
-                      handleScroll(item.id);
-                      setIsSidebarOpen(false);
-                    }}
-                    className="text-left px-2 py-2 text-[#121212]  hover:bg-gray-50 transition-all duration-200"
-                  >
-                    {item.label}
-                  </button>
-                ))}
-              </nav>
-
-              {/* Contact Button at Bottom */}
-              <div className="mt-auto pt-6">
-                <Link
-                  to="/contact"
-                  onClick={() => setIsSidebarOpen(false)}
-                  className="w-full block text-center rounded-md bg-[#6AB536] px-5 py-2.5 text-sm font-medium text-white shadow-sm hover:bg-[#5A9C2E] transform transition-transform duration-200 hover:scale-105"
-                >
-                  Contact Us
-                </Link>
-              </div>
-            </div>
+            <nav className="flex flex-col gap-4 text-base font-medium">
+              <button
+                onClick={() => handleScroll("home")}
+                className="text-left text-[#121212] hover:text-[#6AB536]"
+              >
+                Home
+              </button>
+              <button
+                onClick={() => handleScroll("about-us")}
+                className="text-left text-[#121212] hover:text-[#6AB536]"
+              >
+                About Us
+              </button>
+              <button
+                onClick={() => handleScroll("our-services")}
+                className="text-left text-[#121212] hover:text-[#6AB536]"
+              >
+                Our Services
+              </button>
+              <Link
+                to="/contact"
+                onClick={() => setIsSidebarOpen(false)}
+                className="text-left text-[#121212] hover:text-[#6AB536]"
+              >
+                Contact Us
+              </Link>
+            </nav>
           </div>
         </div>
       )}
