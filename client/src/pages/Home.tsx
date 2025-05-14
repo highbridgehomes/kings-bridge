@@ -499,7 +499,7 @@ const Home = () => {
             <p
               data-aos="fade-up"
               data-aos-duration="2000"
-              className="mt-4  text-base text-pretty text-justify text-white sm:text-lg/relaxed"
+              className="mt-4  text-base text-pretty text-center sm:text-justify text-white sm:text-lg/relaxed"
             >
               At Kingsbridge, we transform your vision into reality with expert
               design and construction solutions. Our team brings years of

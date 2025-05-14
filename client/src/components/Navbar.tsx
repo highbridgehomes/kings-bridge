@@ -51,12 +51,12 @@ const NavBar = () => {
             <nav aria-label="Global">
               <ul className="flex items-center gap-6 text-base font-medium leading-6 font-inter">
                 <li>
-                  <a
-                    href="/"
+                  <Link
+                    to="/"
                     className="text-[#121212] transition hover:text-[#6AB536]"
                   >
                     Home
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <button

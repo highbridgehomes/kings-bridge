@@ -14,11 +14,11 @@ import ClientLogo3 from "../assets/images/client-3.png";
 import ClientLogo4 from "../assets/images/client-4.png";
 import ClientLogo5 from "../assets/images/client-5.png";
 // projects
-import AwoyayaClubHouse from "../assets/images/awoyaya-clubhouse.jpg";
-import Chestnut from "../assets/images/chestnut.jpg";
-import GardensEstate from "../assets/images/gardens-estate.jpg";
-import Haven from "../assets/images/haven.png";
-import Residences from "../assets/images/residences.jpg";
+import AwoyayaClubHouse from "../assets/images/highbridge-awoyaya-estate.jpg";
+import Chestnut from "../assets/images/highbridge-chestnut-estate.jpg";
+import GardensEstate from "../assets/images/gardens-estate.png";
+import Haven from "../assets/images/highbridge-haven-estate.jpg";
+import Residences from "../assets/images/highbridge-residences.jpg";
 // blog posts
 import BlogPost1 from "../assets/images/blogpost1.jpg";
 import BlogPost2 from "../assets/images/blogpost2.jpg";
@@ -28,8 +28,8 @@ import Construction1 from "../assets/images/residential-construction.webp";
 import Construction2 from "../assets/images/infrastructure-development.webp";
 import Construction3 from "../assets/images/compress-project-management.webp";
 import Construction4 from "../assets/images/renovation-remodelling.webp";
-import Facility1 from "../assets/images/maintenance-and-repair.jpg";
-import Facility2 from "../assets/images/energy-management.jpg";
+import Facility1 from "../assets/images/maintenance-and-repair.webp";
+import Facility2 from "../assets/images/energy-management.webp";
 import Facility3 from "../assets/images/security-and-safety-system.webp";
 import Facility4 from "../assets/images/cleaning-services.webp";
 import RealEstate1 from "../assets/images/property-development.webp";

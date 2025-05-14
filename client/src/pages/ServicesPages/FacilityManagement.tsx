@@ -67,7 +67,6 @@ const FacilityManagement = () => {
                   src={service.image}
                   alt={service.title}
                   className="h-56 w-full object-cover"
-                  loading="lazy"
                 />
               </div>
 
