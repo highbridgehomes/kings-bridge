@@ -23,6 +23,19 @@ import Residences from "../assets/images/residences.jpg";
 import BlogPost1 from "../assets/images/blogpost1.jpg";
 import BlogPost2 from "../assets/images/blogpost2.jpg";
 import BlogPost3 from "../assets/images/blogpost3.jpg";
+// Our services
+import Construction1 from "../assets/images/residential-construction.webp";
+import Construction2 from "../assets/images/infrastructure-development.webp";
+import Construction3 from "../assets/images/compress-project-management.webp";
+import Construction4 from "../assets/images/renovation-remodelling.webp";
+import Facility1 from "../assets/images/maintenance-and-repair.jpg";
+import Facility2 from "../assets/images/energy-management.jpg";
+import Facility3 from "../assets/images/security-and-safety-system.webp";
+import Facility4 from "../assets/images/cleaning-services.webp";
+import RealEstate1 from "../assets/images/property-development.webp";
+import RealEstate2 from "../assets/images/sales-and-marketing.webp";
+import RealEstate3 from "../assets/images/estate-investment-advisory.webp";
+import RealEstate4 from "../assets/images/property-management.webp";
 
 export const IMAGES = {
   kingsBridgeLogo: KingsBridgeLogo,
@@ -47,4 +60,19 @@ export const IMAGES = {
   blogPost2: BlogPost2,
   blogPost3: BlogPost3,
   realEstate: RealEstate,
+  // ourservices
+  construction1: Construction1,
+  construction2: Construction2,
+  construction3: Construction3,
+  construction4: Construction4,
+
+  facility1: Facility1,
+  facility2: Facility2,
+  facility3: Facility3,
+  facility4: Facility4,
+
+  realEstate1: RealEstate1,
+  realEstate2: RealEstate2,
+  realEstate3: RealEstate3,
+  realEstate4: RealEstate4,
 };
