@@ -2,8 +2,61 @@ import { Helmet } from "react-helmet-async";
 import NavBar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { Globe, Mail, MapPin, Phone } from "lucide-react";
+import { useState } from "react";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Contact = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({ ...prevData, [name]: value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    setIsSubmitting(true);
+    try {
+      const response = await fetch("https://formspree.io/f/mbloworr", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        toast.success("Thank you, KingsBridge has received your message.", {
+          position: "top-right",
+          autoClose: 3000,
+        });
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        toast.error("Failed to send message. Please try again.", {
+          position: "top-right",
+          autoClose: 3000,
+        });
+      }
+    } catch (error) {
+      console.error(error);
+      toast.error("An error occurred. Please try again.", {
+        position: "top-right",
+        autoClose: 3000,
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <>
       <Helmet>
@@ -17,7 +70,10 @@ const Contact = () => {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12  mx-auto">
           {/* Contact Form */}
-          <form className="space-y-6 sm:p-6 p-4 border border-gray-200 shadow-md rounded-2xl">
+          <form
+            onSubmit={handleSubmit}
+            className="space-y-6 sm:p-6 p-4 border border-gray-200 shadow-md rounded-2xl"
+          >
             <div>
               <h3 className="text-2xl  text-gray-900">Get in Touch</h3>
               <p className="text-gray-600 mt-1">
@@ -27,9 +83,16 @@ const Contact = () => {
             </div>
 
             <div>
-              <label className="block text-gray-700 mb-1">Name</label>
+              <label htmlFor="name" className="block text-gray-700 mb-1">
+                Name
+              </label>
               <input
                 type="text"
+                id="name"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                required
                 className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#6AB536]"
               />
             </div>
@@ -38,6 +101,11 @@ const Contact = () => {
               <label className="block text-gray-700 mb-1">Email</label>
               <input
                 type="email"
+                name="email"
+                placeholder="Enter your email"
+                value={formData.email}
+                onChange={handleChange}
+                required
                 className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#6AB536]"
               />
             </div>
@@ -47,7 +115,11 @@ const Contact = () => {
                 Enter your message
               </label>
               <textarea
-                rows={5}
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                required
+                rows={2}
                 className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#6AB536]"
                 placeholder="Type your message..."
               ></textarea>
@@ -55,9 +127,10 @@ const Contact = () => {
 
             <button
               type="submit"
-              className="transform transition-transform duration-200 hover:scale-101 w-full py-3 bg-[#6AB536] hover:bg-[#5A9C2E] text-white rounded-md"
+              disabled={isSubmitting}
+              className="transform transition-transform duration-200 hover:scale-100 w-full py-3 bg-[#6AB536] hover:bg-[#5A9C2E] text-white rounded-md"
             >
-              Send Message
+              {isSubmitting ? "Sending..." : "Send Message"}
             </button>
           </form>
 
@@ -122,6 +195,9 @@ const Contact = () => {
         </div>
       </section>
       <Footer />
+
+      {/* React Toastify container for toasts */}
+      <ToastContainer />
     </>
   );
 };
