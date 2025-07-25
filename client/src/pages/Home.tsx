@@ -112,7 +112,7 @@ const Home = () => {
             {/* Top-left overlapping badge */}
             <a
               href="#"
-              className="absolute top-6 -left-10 flex items-center gap-2 bg-white shadow-md rounded-full px-4 py-2"
+              className="absolute top-6 -left-6 sm:-left-10 flex items-center gap-2 bg-white shadow-md rounded-full px-4 py-2"
             >
               <div className="relative">
                 <span className="absolute bottom-4 left-0 bg-[#6AB536] border-white p-2 rounded-full">
@@ -128,7 +128,7 @@ const Home = () => {
             {/* Bottom-right overlapping badge */}
             <a
               href="#"
-              className="absolute -bottom-6 -right-4 flex items-center gap-2 bg-white shadow-md rounded-full px-4 py-2"
+              className="absolute -bottom-6 -right-6 sm:-right-4 flex items-center gap-2 bg-white shadow-md rounded-full px-4 py-2"
             >
               <div className="relative">
                 <span className="absolute left-40 bottom-2 bg-[#6AB536] border-white p-2 rounded-full">
@@ -150,7 +150,7 @@ const Home = () => {
         <div className="bg-[#FFFFFF] shadow-lg rounded-2xl p-8 max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
           {stats.map((item, index) => (
             <div key={index}>
-              <p className="text-4xl font-bold text-[#121212]">
+              <p className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#121212]">
                 <Counter target={item.target} />+
               </p>
               <p className="mt-2 text-sm font-medium text-[#121212]">
@@ -167,7 +167,7 @@ const Home = () => {
           <h3
             data-aos="fade-right"
             data-aos-easing="ease-in-sine"
-            className="text-3xl font-bold text-gray-900 sm:text-4xl leading-snug"
+            className="text-2xl md:text-3xl font-bold text-gray-900 lg:text-4xl leading-snug"
           >
             Welcome to <span className="text-[#6AB536]">KINGSBRIDGE</span>{" "}
             <br />
@@ -491,7 +491,7 @@ const Home = () => {
             <h1
               data-aos="fade-up"
               data-aos-duration="2000"
-              className="text-4xl font-bold  text-white sm:text-5xl"
+              className="text-2xl md:text-3xl lg:text-4xl font-bold  text-white sm:text-5xl"
             >
               Let’s Get Started on Building Something Amazing Together
             </h1>

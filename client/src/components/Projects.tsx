@@ -87,7 +87,10 @@ const FeaturedProjects = () => {
   }, []);
 
   return (
-    <section className="mt-8 bg-[#FFFFFF] mx-auto px-4 py-12 sm:px-6 lg:px-16 sm:mt-10 lg:mt-16">
+    <section
+      id="featured-projects"
+      className="scroll-mt-20 mt-8 bg-[#FFFFFF] mx-auto px-4 py-12 sm:px-6 lg:px-16 sm:mt-10 lg:mt-16"
+    >
       <h2
         data-aos="fade-down"
         className="flex items-center mb-4 justify-center text-3xl sm:text-4xl lg:text-5xl font-semibold text-gray-900"

@@ -22,7 +22,7 @@ const FAQ = () => {
             open
           >
             <summary className="flex pt-4 px-6 items-center justify-between gap-1.5 text-gray-900">
-              <h2 className="text-lg font-medium">
+              <h2 className="text-base sm:text-lg font-medium">
                 What services does Kingsbridge offer?
               </h2>
               <svg
@@ -51,7 +51,7 @@ const FAQ = () => {
 
           <details className="group py-4 [&_summary::-webkit-details-marker]:hidden">
             <summary className="flex px-6 items-center justify-between gap-1.5 text-gray-900">
-              <h2 className="text-lg font-medium">
+              <h2 className="text-base sm:text-lg font-medium">
                 Do you handle both residential renovations and large-scale
                 commercial construction projects?
               </h2>
@@ -81,7 +81,7 @@ const FAQ = () => {
 
           <details className="group py-4 [&_summary::-webkit-details-marker]:hidden">
             <summary className="flex pb-4 px-6 items-center justify-between gap-1.5 text-gray-900">
-              <h2 className="text-lg font-medium">
+              <h2 className="text-base sm:text-lg font-medium">
                 Do your security systems include 24/7 monitoring services?
               </h2>
               <svg
@@ -108,7 +108,7 @@ const FAQ = () => {
           </details>
           <details className="group py-4 [&_summary::-webkit-details-marker]:hidden">
             <summary className="flex px-6 items-center justify-between gap-1.5 text-gray-900">
-              <h2 className="text-lg font-medium">
+              <h2 className="text-base sm:text-lg font-medium">
                 Can Kingsbridge assist with property acquisition or real estate
                 consultancy?
               </h2>
@@ -137,7 +137,7 @@ const FAQ = () => {
 
           <details className="group py-4 [&_summary::-webkit-details-marker]:hidden">
             <summary className="flex pb-4 px-6 items-center justify-between gap-1.5 text-gray-900">
-              <h2 className="text-lg font-medium">
+              <h2 className="text-base sm:text-lg font-medium">
                 How do you ensure quality and compliance on construction
                 projects?
               </h2>

@@ -15,93 +15,75 @@ const Footer = () => {
           </a>
         </div>
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
-          <div>
+          <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
             <div className="text-center sm:text-left">
               <p className="text-lg font-medium text-white">Our Services</p>
-              <div className="flex flex-row gap-8 text-center sm:text-left">
-                <ul className="mt-8 space-y-4 text-sm">
-                  <li>
-                    <a
-                      className="text-white transition hover:text-gray-200"
-                      href="#"
-                    >
-                      Maintenance and repair services
-                    </a>
-                  </li>
 
-                  <li>
-                    <a
-                      className="text-white transition hover:text-gray-200"
-                      href="#"
-                    >
-                      Energy Management
-                    </a>
-                  </li>
+              <ul className="mt-8 space-y-4 text-sm">
+                <li>
+                  <a
+                    className="text-white transition hover:text-gray-200"
+                    href="#"
+                  >
+                    Building Construction and Infrastructure Development
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="text-white transition hover:text-gray-200"
+                    href="#"
+                  >
+                    Renovation, Remodeling and Maintenance
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="text-white transition hover:text-gray-200"
+                    href="#"
+                  >
+                    Energy Management Solutions
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="text-white transition hover:text-gray-200"
+                    href="#"
+                  >
+                    Security, Safety and Surveillance Systems
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="text-white transition hover:text-gray-200"
+                    href="#"
+                  >
+                    Cleaning and Janitorial Services
+                  </a>
+                </li>
+              </ul>
+            </div>
 
-                  <li>
-                    <a
-                      className="text-white transition hover:text-gray-200"
-                      href="#"
-                    >
-                      Security and safety systems
-                    </a>
-                  </li>
+            <div className="text-center sm:text-left">
+              <p className="text-lg font-medium text-white">Quick Links</p>
 
-                  <li>
-                    <a
-                      className="text-white transition hover:text-gray-200"
-                      href="#"
-                    >
-                      Cleaning and janitorial services
-                    </a>
-                  </li>
-                </ul>
-                <ul className="mt-8 space-y-4 text-sm">
-                  <li>
-                    <a
-                      className="text-white transition hover:text-gray-200"
-                      href="#"
-                    >
-                      Company History
-                    </a>
-                  </li>
-
-                  <li>
-                    <a
-                      className="text-white transition hover:text-gray-200"
-                      href="#"
-                    >
-                      Residential and commercial building construction
-                    </a>
-                  </li>
-
-                  <li>
-                    <a
-                      className="text-white transition hover:text-gray-200"
-                      href="#"
-                    >
-                      Infrastucture Development
-                    </a>
-                  </li>
-
-                  <li>
-                    <a
-                      className="text-white transition hover:text-gray-200"
-                      href="#"
-                    >
-                      Project Management
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      className="text-white transition hover:text-gray-200"
-                      href="#"
-                    >
-                      Renovation and remodeling
-                    </a>
-                  </li>
-                </ul>
-              </div>
+              <ul className="mt-8 space-y-4 text-sm">
+                <li>
+                  <a
+                    className="text-white transition hover:text-gray-200"
+                    href="https://www.highbridgegroup.org"
+                  >
+                    Highbridge Group
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="text-white transition hover:text-gray-200"
+                    href="https://www.highbridgegroup.org/highbridge-homes"
+                  >
+                    Highbridge Homes Limited
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
 

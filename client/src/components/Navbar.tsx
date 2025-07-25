@@ -21,7 +21,6 @@ const NavBar = () => {
 
   const handleScroll = (id: string) => {
     if (location.pathname !== "/") {
-      // Navigate to home first, then scroll after route change
       navigate("/", { state: { scrollTo: id } });
     } else {
       const section = document.getElementById(id);
@@ -39,7 +38,7 @@ const NavBar = () => {
           <div className="md:flex md:items-center md:gap-12">
             <a className="block  font-bold text-lg" href="/">
               <img
-                className="h-16 w-auto object-contain"
+                className="h-12 sm:h-16 w-auto object-contain"
                 alt="KingsBridge Logo"
                 src={IMAGES.kingsBridgeLogo}
               />
@@ -50,14 +49,6 @@ const NavBar = () => {
           <div className="hidden md:block">
             <nav aria-label="Global">
               <ul className="flex items-center gap-6 text-base font-medium leading-6 font-inter">
-                <li>
-                  <Link
-                    to="/"
-                    className="text-[#121212] transition hover:text-[#6AB536]"
-                  >
-                    Home
-                  </Link>
-                </li>
                 <li>
                   <button
                     onClick={() => handleScroll("about-us")}
@@ -72,6 +63,14 @@ const NavBar = () => {
                     className="text-[#121212] transition hover:text-[#6AB536]"
                   >
                     Our Services
+                  </button>
+                </li>
+                <li>
+                  <button
+                    onClick={() => handleScroll("featured-projects")}
+                    className="text-[#121212] transition hover:text-[#6AB536]"
+                  >
+                    Projects
                   </button>
                 </li>
               </ul>
@@ -106,15 +105,14 @@ const NavBar = () => {
       {isSidebarOpen && (
         <div className="fixed inset-0 z-50 bg-gray-400 bg-opacity-60">
           <div
-            className={`fixed top-0 right-0 h-full w-full bg-white p-6 flex flex-col transform transition-transform duration-300 ease-in-out ${
+            className={`fixed top-0 right-0 h-full w-full bg-white flex flex-col transform transition-transform duration-300 ease-in-out ${
               isSidebarOpen ? "translate-x-0" : "translate-x-full"
             }`}
           >
-            {/* Top Bar with Close Button */}
-            <div className="flex justify-between items-center mb-6 border-b pb-3 border-b-gray-200 p">
+            <div className="flex h-20 items-center justify-between px-4 border-b border-b-gray-200">
               <img
                 alt="Kingsbridge Logo"
-                className="object-cover w-20 h-10"
+                className="object-contain w-auto h-12 "
                 src={IMAGES.kingsBridgeLogo}
               />
               <button onClick={() => setIsSidebarOpen(false)}>
@@ -123,12 +121,12 @@ const NavBar = () => {
             </div>
 
             {/* Menu Items */}
-            <div className="flex flex-col flex-grow">
+            <div className="flex flex-col flex-grow  p-6">
               <nav className="flex flex-col gap-4 text-base font-medium">
                 {[
-                  { label: "Home", id: "home" },
                   { label: "About Us", id: "about-us" },
                   { label: "Our Services", id: "our-services" },
+                  { label: "Projects", id: "featured-projects" },
                 ].map((item) => (
                   <button
                     key={item.id}
